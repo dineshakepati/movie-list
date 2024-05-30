@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Page</title>
+<style>
+    /* CSS styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+    #signup-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-control {
+        margin-bottom: 10px;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div id="signup-form">
+    <h2>Sign Up</h2>
+    <input type="text" id="firstname" class="form-control" placeholder="First Name">
+<br>
+    <input type="text" id="lastname" class="form-control" placeholder="Last Name">
+<br>
+    <input type="email" id="email" class="form-control" placeholder="Email">
+<br>
+    <input type="password" id="create-password" class="form-control" placeholder="Create Password">
+<br>
+    <input type="password" id="verify-password" class="form-control" placeholder="Verify Password">
+<br>
+    <button id="signup-btn" class="btn">Sign Up</button>
+<br>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+</div>
+
+<script>
+    const signupBtn = document.getElementById('signup-btn');
+
+    signupBtn.addEventListener('click', () => {
+        const firstname = document.getElementById('firstname').value;
+        const lastname = document.getElementById('lastname').value;
+        const email = document.getElementById('email').value;
+        const createPassword = document.getElementById('create-password').value;
+        const verifyPassword = document.getElementById('verify-password').value;
+
+        // Here you can perform user registration
+        // For simplicity, let's just redirect to the main page if all fields are not empty
+        if (firstname.trim() !== '' && lastname.trim() !== '' && email.trim() !== '' && createPassword.trim() !== '' && verifyPassword.trim() !== '') {
+            if (createPassword === verifyPassword) {
+                window.location.href = 'main.html'; // Redirect to the main page
+            } else {
+                alert('Passwords do not match. Please verify your password.');
+            }
+        } else {
+            alert('Please fill out all fields.');
+        }
+    });
+</script>
+</body>
+</html>

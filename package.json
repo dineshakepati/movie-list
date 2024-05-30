@@ -1,0 +1,27 @@
+{
+  "name": "movie",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'No build step needed'"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "your-git-repository-url"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
