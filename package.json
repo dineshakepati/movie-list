@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "your-git-repository-url"
+    "url": "https://github.com/dineshakepati/movie-list.git"
   },
   "keywords": [
     "node",
